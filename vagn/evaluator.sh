@@ -1,5 +1,5 @@
 #!/bin/bash
-rosbag record -a -o /jackal_ws/src/nav-competition-icra2022/bind/$1.bag __name:=my_bag > /dev/null 2>&1 &
+#rosbag record -a -o /jackal_ws/src/nav-competition-icra2022/bind/$1.bag __name:=my_bag > /dev/null 2>&1 &
 #rosbag record front/scan odometry/filtered visualization localization tf tf_static -o /jackal_ws/src/nav-competition-icra2022/bind/$1.bag __name:=my_bag > /dev/null 2>&1 &
 cd /jackal_ws/src/nav-competition-icra2022/vagn
 python localgoal.py & #> /jackal_ws/src/nav-competition-icra2022/bind/$1localgoal.txt 2>&1 &

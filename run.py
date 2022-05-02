@@ -92,7 +92,7 @@ if __name__ == "__main__":
         'roslaunch',
         launch_file,
     ])
-    bash_file = join(base_path, '..', 'vagn/evaluator.sh')
+    bash_file = '/jackal_ws/src/nav-competition-icra2022/vagn/evaluator.sh'
     gn_nav_stack_process = subprocess.Popen([
         'bash',
         bash_file,
