@@ -1,0 +1,22 @@
+<package>
+  <description brief="amrl_msgs">
+
+     ROS Message definitions used by AMRL projects
+
+  </description>
+  <author>Joydeep Biswas</author>
+  <license>MIT License</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="std_msgs"/>
+  <depend package="nav_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="visualization_msgs"/>
+  <depend package="tf"/>
+  <depend package="angles"/>
+  <depend package="geometry_msgs"/>
+</package>
+
+

@@ -1,0 +1,17 @@
+Pose2Df[] robot_poses
+Pose2Df[] robot_vels
+Pose2Df[] human_poses
+Pose2Df[] human_vels
+Pose2Df goal_pose
+Pose2Df local_target
+Pose2Df door_pose
+uint8 door_state
+# 0 = GoAlone
+# 1 = Halt
+# 2 = Follow
+# 3 = Pass
+uint8 robot_state
+# -1 is no target, otherwise index of target
+int32 follow_target
+---
+int32 action

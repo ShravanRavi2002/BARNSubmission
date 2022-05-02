@@ -1,0 +1,30 @@
+{
+    "edges": [
+        {
+            "has_automated_door": false,
+            "has_door": false,
+            "has_elevator": false,
+            "has_stairs": false,
+            "max_clearance": 10.0,
+            "max_speed": 50.0,
+            "s0_id": 0,
+            "s1_id": 1
+        }
+    ],
+    "nodes": [
+        {
+            "id": 0,
+            "loc": {
+                "x": 0,
+                "y": 0.0
+            }
+        },
+        {
+            "id": 1,
+            "loc": {
+                "x": 10.0,
+                "y": 0.0
+            }
+        }
+    ]
+}

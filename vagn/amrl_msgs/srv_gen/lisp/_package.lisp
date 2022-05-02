@@ -1,0 +1,10 @@
+(cl:defpackage amrl_msgs-srv
+  (:use )
+  (:export
+   "SOCIALPIPSSRV"
+   "<SOCIALPIPSSRV-REQUEST>"
+   "SOCIALPIPSSRV-REQUEST"
+   "<SOCIALPIPSSRV-RESPONSE>"
+   "SOCIALPIPSSRV-RESPONSE"
+  ))
+

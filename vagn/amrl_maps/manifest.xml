@@ -1,0 +1,13 @@
+<package>
+  <description brief="amrl_maps">
+
+     ROS Maps used by AMRL projects
+
+  </description>
+  <author>Joydeep Biswas</author>
+  <license>MIT License</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+</package>
+
+

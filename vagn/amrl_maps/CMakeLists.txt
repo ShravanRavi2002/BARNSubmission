@@ -1,0 +1,6 @@
+PROJECT(amrl_maps)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+INCLUDE($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+ROSBUILD_INIT()
+
