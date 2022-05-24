@@ -33,9 +33,16 @@ From: ros:melodic
 
     export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/graph_navigation:$ROS_PACKAGE_PATH
     export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/amrl_msgs:$ROS_PACKAGE_PATH
+    export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/enml:$ROS_PACKAGE_PATH
     export PATH=/jackal_ws/src/nav-competition-icra2022/vagn/graph_navigation/libtorch:$PATH
     cd /jackal_ws/src/nav-competition-icra2022/vagn/amrl_msgs
     make 
+    cd ..
+
+    cd /jackal_ws/src/nav-competition-icra2022/vagn
+    cd enml
+    ./InstallPackages
+    make
     cd ..
 
     cd /jackal_ws/src/nav-competition-icra2022/vagn/graph_navigation
@@ -47,5 +54,8 @@ From: ros:melodic
 %environment
     export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/graph_navigation:$ROS_PACKAGE_PATH
     export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/amrl_msgs:$ROS_PACKAGE_PATH
+    export ROS_PACKAGE_PATH=/jackal_ws/src/nav-competition-icra2022/vagn/enml:$ROS_PACKAGE_PATH
     export PATH=/jackal_ws/src/nav-competition-icra2022/vagn/graph_navigation/libtorch:$PATH
     export PATH="/venv/bin:$PATH"
+    export ROS_MASTER_URI=http://localhost:11311
+    export ROS_HOSTNAME=localhost

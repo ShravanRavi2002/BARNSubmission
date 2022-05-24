@@ -22,7 +22,7 @@ class LocalizationSpoofer():
 	def __init__(self):
 
 		# odometry filtered msg callback
-		rospy.Subscriber('/odometry/filtered', Odometry, self.callback)
+		rospy.Subscriber('enml_odometry', Odometry, self.callback)
 
         # publisher for localization spoofing
 		self.localization_spoof_topic = rospy.Publisher('/localization', Localization2DMsg, queue_size=10)

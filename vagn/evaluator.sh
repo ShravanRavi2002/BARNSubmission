@@ -5,5 +5,9 @@ cd /jackal_ws/src/nav-competition-icra2022/vagn
 python localgoal.py & #> /jackal_ws/src/nav-competition-icra2022/bind/$1localgoal.txt 2>&1 &
 python local_spoofer.py & #> /jackal_ws/src/nav-competition-icra2022/bind/$1spoof.txt 2>&1 &
 
+cd enml
+./bin/enml &
+cd ..
+
 cd graph_navigation
 ./bin/navigation --dw 10.0 --cw 0.0 --fw 0.0 move_base_simple/goal:=move_base_simple/localgoal &

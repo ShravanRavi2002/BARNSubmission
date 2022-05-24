@@ -15,7 +15,7 @@
     <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
     <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
 
-    <remap from="odom" to="odometry/filtered" />
+    <remap from="odom" to="enml_odometry" />
     <remap from="cmd_vel" to="cmd_vel_fake" />
   </node>
 </launch>

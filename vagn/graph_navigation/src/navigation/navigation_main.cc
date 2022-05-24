@@ -295,10 +295,6 @@ void LocalizationCallback(const amrl_msgs::Localization2DMsg& msg) {
     printf("Localization t=%f\n", GetWallTime());
   }
   navigation_.UpdateLocation(Vector2f(msg.pose.x, msg.pose.y), msg.pose.theta);
-  if (map != msg.map) {
-    map = msg.map;
-    navigation_.UpdateMap(navigation::GetMapPath(FLAGS_maps_dir, msg.map));
-  }
 }
 
 void LocalizationSpoofedCallback(const nav_msgs::Odometry& msg) {
@@ -877,7 +873,7 @@ int main(int argc, char** argv) {
 
   // Subscribers
   ros::Subscriber velocity_sub =
-      n.subscribe(CONFIG_odom_topic, 1, &OdometryCallback);
+      n.subscribe("enml_odometry", 1, &OdometryCallback);
   ros::Subscriber localization_sub =
       n.subscribe(CONFIG_localization_topic, 1, &LocalizationCallback);
   ros::Subscriber laser_sub =
