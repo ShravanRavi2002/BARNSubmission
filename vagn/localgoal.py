@@ -26,14 +26,17 @@ def callback(data):
         return
     posx = odom.pose.pose.position.x
     posy = odom.pose.pose.position.y
-
+    diffx = odom.pose.pose.position.x - possibleGoal.pose.position.x
+    diffy = odom.pose.pose.position.x - possibleGoal.pose.position.y
     for possibleGoal in data.poses:
+        possibleGoal.pose.position.x = possibleGoal.pose.position.x + diffx
+        possiblGoal.pose.position.y = possibleGoal.pose.position.x + diffy
         goalx = possibleGoal.pose.position.x
         goaly = possibleGoal.pose.position.y
 
         dist = math.sqrt((posx - goalx)**2 + (posy - goaly)**2)
         
-        if(dist < 1.5 and dist > 1):
+        if(dist < 1 and dist > 0.75):
             pose_pub.publish(possibleGoal)
             return
 
