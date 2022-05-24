@@ -26,11 +26,11 @@ def callback(data):
         return
     posx = odom.pose.pose.position.x
     posy = odom.pose.pose.position.y
-    diffx = odom.pose.pose.position.x - possibleGoal.pose.position.x
-    diffy = odom.pose.pose.position.x - possibleGoal.pose.position.y
+    diffx = odom.pose.pose.position.x - data.poses[0].pose.position.x
+    diffy = odom.pose.pose.position.y - data.poses[0].pose.position.y
     for possibleGoal in data.poses:
         possibleGoal.pose.position.x = possibleGoal.pose.position.x + diffx
-        possiblGoal.pose.position.y = possibleGoal.pose.position.x + diffy
+        possibleGoal.pose.position.y = possibleGoal.pose.position.y + diffy
         goalx = possibleGoal.pose.position.x
         goaly = possibleGoal.pose.position.y
 
