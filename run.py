@@ -11,7 +11,7 @@ import rospkg
 from gazebo_simulation import GazeboSimulation
 
 INIT_POSITION = [-2, 3, 1.57]  # in world frame
-GOAL_POSITION = [0, 10]  # relative to the initial position
+GOAL_POSITION = [0, 10]  #244 278 relative to the initial position
 
 def compute_distance(p1, p2):
     return ((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2) ** 0.5

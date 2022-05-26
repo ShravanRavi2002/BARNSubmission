@@ -53,7 +53,7 @@ def main():
     rospy.init_node('listen',anonymous=True)
     pose_pub = rospy.Publisher("move_base_simple/localgoal",PoseStamped,queue_size=1)
     rospy.Subscriber("/move_base/TrajectoryPlannerROS/global_plan", Path, callback)
-    rospy.Subscriber("odometry/filtered", Odometry, callbackO)
+    rospy.Subscriber("enml_odometry", Odometry, callbackO)
 
     rospy.spin()
 
